@@ -22,6 +22,8 @@ class MatriculaViewSet(viewsets.ModelViewSet):
     queryset = Matricula.objects.all()
     serializer_class = MatriculaSerializer
 
+    http_method_names = ['get', 'post', 'put', 'patch']
+
 class ListaMatriculasAluno(generics.ListAPIView):
     """Listando as matrículas de um aluno ou aluna"""
     def get_queryset(self):
